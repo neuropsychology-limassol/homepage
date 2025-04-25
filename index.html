@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Готов ли ваш ребенок к школе? - Нейродиагностика в Лимассоле</title>
-    <link rel="icon" src="favicon.ico" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,9 +37,17 @@
              object-fit: cover; /* Cover ensures the image covers the area, might crop */
         }
         .consultant-thumbnail {
-            width: 60px; /* Fixed width for thumbnail */
-            height: 60px; /* Fixed height for thumbnail */
+            width: 80px; /* Increased size slightly */
+            height: 80px; /* Increased size slightly */
             object-fit: cover; /* Ensure image covers the space */
+            flex-shrink: 0; /* Prevent image from shrinking */
+        }
+        /* Icon styling */
+        .info-icon {
+             color: #6366f1; /* Indigo-500 */
+             margin-right: 0.5rem; /* space after icon */
+             width: 1.2em; /* ensure consistent icon width */
+             text-align: center;
         }
     </style>
 </head>
@@ -55,7 +62,8 @@
 
     <main class="container mx-auto mt-8 p-6">
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start"> <div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+            <div>
                 <h2 class="text-2xl font-bold text-gray-800 mb-4">Что мы предлагаем:</h2>
                 <ul class="list-disc list-inside space-y-3 text-gray-700 mb-6">
                     <li>
@@ -69,40 +77,62 @@
                     </li>
                 </ul>
 
-                <div class="expert-box p-4 rounded-lg shadow mb-6 flex items-center space-x-4">
-                     <img src="olga.jpeg"
-                         alt="Нейропсихолог-педагог"
-                         class="rounded-full consultant-thumbnail flex-shrink-0"
+                <div class="expert-box p-4 rounded-lg shadow mb-6 flex items-start space-x-4">
+                    <img src="olga.jpeg"
+                         alt="Ольга Борцова - Нейропсихолог, школьный психолог"
+                         class="rounded-full consultant-thumbnail"
                          onerror="this.onerror=null; this.src='hero.jpeg';">
-                         <div>
-                        <p class="text-lg font-semibold text-indigo-800">НЕЙРОПСИХОЛОГ - ПЕДАГОГ</p>
-                        <p class="text-md font-medium text-indigo-700">С ОПЫТОМ РАБОТЫ 25 ЛЕТ</p>
+                    <div class="flex-grow"> <h3 class="text-lg font-semibold text-indigo-800 mb-1">Ольга Борцова</h3>
+                        <p class="text-md font-medium text-indigo-700 mb-2">Нейропсихолог, школьный психолог, преподаватель музыки</p>
+
+                        <p class="text-sm text-gray-700 mb-1 flex items-center">
+                             <i class="fas fa-graduation-cap info-icon"></i> МГПУ (диплом с отличием: практический психолог, методист), Музыкальное училище (диплом с отличием: музыкальное воспитание)
+                        </p>
+                        <p class="text-sm text-gray-700 mb-1 flex items-center">
+                             <i class="fas fa-certificate info-icon"></i> Сертификаты по детской нейропсихологии НИИ имени А.Р. Лурия, Москва
+                        </p>
+                         <p class="text-sm text-gray-700 mb-1 flex items-center">
+                            <i class="fas fa-briefcase info-icon"></i> <strong>Опыт работы: 25 лет.</strong> Работала в московских школах (прием родителей), международной школе на Кипре.
+                        </p>
+                        <p class="text-sm text-gray-700 mb-1 flex items-center">
+                             <i class="fas fa-map-marker-alt info-icon"></i> Живет и работает в Лимассоле 25 лет.
+                        </p>
+                        <p class="text-sm text-gray-700 mb-1 flex items-center">
+                             <i class="fas fa-language info-icon"></i> Языки: Русский, Английский, Греческий.
+                        </p>
+                        <p class="text-sm text-gray-700 mt-2 flex items-start"> <i class="fas fa-child info-icon"></i> Занимается нейрокоррекцией детей, проводит диагностики. Вырастила двух успешных дочерей.
+                        </p>
+                        <p class="text-sm text-gray-600 italic mt-2 flex items-start">
+                           <i class="fas fa-info-circle info-icon"></i> По запросу мамы ответит на все дополнительные вопросы.
+                       </p>
                     </div>
                 </div>
-
-                 <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
                     <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">Свяжитесь с нами:</h3>
-                    <div class="flex items-center justify-center space-x-4 mb-4 flex-wrap"> <a href="https://t.me/+35799442307" target="_blank" class="text-blue-500 hover:text-blue-700 text-3xl" aria-label="Telegram">
+                    <div class="flex items-center justify-center space-x-4 mb-4 flex-wrap">
+                         <a href="https://t.me/+35799442307" target="_blank" class="text-blue-500 hover:text-blue-700 text-3xl" aria-label="Telegram">
                             <i class="fab fa-telegram"></i>
                         </a>
                         <a href="https://wa.me/35799442307" target="_blank" class="text-green-500 hover:text-green-700 text-3xl" aria-label="WhatsApp">
                             <i class="fab fa-whatsapp"></i>
                         </a>
-                        <a href="tel:+35799442307" class="text-xl md:text-2xl font-bold text-gray-800 hover:text-orange-600 ml-2"> +357 99 442 307
+                        <a href="tel:+35799442307" class="text-xl md:text-2xl font-bold text-gray-800 hover:text-orange-600 ml-2">
+                           +357 99 442 307
                         </a>
                     </div>
                      <p class="text-center text-red-600 font-semibold text-lg mt-4 animate-pulse">
-                        Осталось пару мест на 2025 — успейте записаться! 🚀
-                        </p>
-                     <div class="text-center mt-4">
-                         <a href="tel:+35799442307" class="cta-button text-white font-bold py-3 px-6 rounded-lg inline-block shadow-lg hover:shadow-xl">
+                         Осталось пару мест на 2025 — успейте записаться! 🚀
+                         </p>
+                    <div class="text-center mt-4">
+                        <a href="tel:+35799442307" class="cta-button text-white font-bold py-3 px-6 rounded-lg inline-block shadow-lg hover:shadow-xl">
                             Записаться сейчас
-                         </a>
-                     </div>
+                        </a>
+                    </div>
                 </div>
             </div>
 
-            <div class="mt-6 md:mt-0 flex justify-center"> <img src="hero.jpeg"
+            <div class="mt-6 md:mt-0 flex justify-center">
+                 <img src="hero.jpeg"
                      alt="Ребенок проходит нейродиагностику в игровой форме"
                      class="rounded-lg shadow-xl w-full h-auto object-cover main-image"
                      onerror="this.onerror=null; this.src='hero.jpeg';">
