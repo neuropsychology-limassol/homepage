@@ -1,1 +1,1 @@
-The homepafe of neurospychology limassol - a consultalt offering their services.
+The homepage of neurospychology limassol - a consultalt offering their services.
